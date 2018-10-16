@@ -1,0 +1,12 @@
+[submodule "thirdparty/ansible-freeipa"]
+	path = thirdparty/ansible-freeipa
+	url = https://github.com/silanea/ansible-freeipa.git
+[submodule "roles/network"]
+	path = roles/network
+	url = https://github.com/linux-system-roles/network.git
+[submodule "roles/firewall"]
+	path = roles/firewall
+	url = https://github.com/linux-system-roles/firewall.git
+[submodule "roles/ansible-ntpd"]
+	path = roles/ansible-ntpd
+	url = https://github.com/silanea/ansible-ntpd.git
