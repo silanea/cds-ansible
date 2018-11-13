@@ -10,3 +10,6 @@
 [submodule "roles/ansible-ntpd"]
 	path = roles/ansible-ntpd
 	url = https://github.com/silanea/ansible-ntpd.git
+[submodule "roles/ansible-role-bind"]
+	path = roles/ansible-role-bind
+	url = https://github.com/bertvv/ansible-role-bind.git

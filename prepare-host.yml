@@ -1,0 +1,15 @@
+---
+- packages:
+  - joe
+  - git
+
+- name: Install packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ packages }}"
+
+- git:
+  repo: 'https://github.com/silanea/cds-ansible.git'
+  dest: /etc/ansible

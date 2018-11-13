@@ -1,0 +1,15 @@
+---
+# cds-ansible
+# Playbook: server master
+
+roles:
+  # prepare base system - packages, settings...
+  - cds-server
+  
+  # IPA
+  - cds-ipa
+  
+  # Apache
+  - ansible-apache
+  
+  

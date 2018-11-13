@@ -1,0 +1,42 @@
+---
+ansible_user: "CHANGEME"
+# ansible_ssh_private_key_file: "/etc/ansible/ssh/CHANGEME.key"
+ansible_password: "CHANGEME"
+ansible_become: yes
+ansible_python_interpreter: "/usr/bin/python3"
+
+sshd_skip_defaults: true
+sshd:
+  Compression: true
+  Banner: "/etc/ssh/banner"
+  ListenAddress:
+    - "0.0.0.0"
+    - "::"
+  GSSAPIAuthentication: false
+#  GSSAPICleanupCredentials: true
+  GSSAPIKeyExchange: true
+#  KerberosAuthentication: true
+#  KerberosOrLocalPasswd: true
+#  KerberosUniqueTicket: true
+  LoginGraceTime: 20
+  Subsystem: "sftp /usr/libexec/openssh/sftp-server"
+  UsePAM: true
+  X11Forwarding: false
+  TCPKeepAlive: true
+  KexAlgorithms: "curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256"
+  Ciphers: "chacha20-poly1305@openssh.com,aes256-gcm@openssh.com"
+  MACs: "hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com"
+  ShowPatchLevel: false
+  PrintLastLog: true
+  PrintMotd: true
+  PermitEmptyPasswords: false
+  PasswordAuthentication: true
+  ChallengeResponseAuthentication: true
+  AllowGroups: "ssh-users"
+  Match:
+    - Condition: "Group ssh-users"
+      GSSAPIAuthentication: true
+
+firewalld_packages:
+  - firewalld
+  - python3-firewall
