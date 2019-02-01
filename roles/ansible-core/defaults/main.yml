@@ -1,11 +1,14 @@
 ---
-core.ansibleuser.comment: Local maintenance account (used for Ansible management)
-core.ansibleuser.admingroup: wheel
-core.ansibleuser.password_never_expires: true
-core.ansibleuser.sshkey.type: ed25519
-core.ansibleuser.sshkey.bits: 256
-core.ansibleuser.sshkey.passphrase:
+core:
+  ansibleuser:
+    comment: Local maintenance account (used for Ansible management)
+    admingroup: wheel
+    password_never_expires: true
+    sshkey:
+      type: ed25519
+      bits: 256
+      passphrase:
 
-core.packages:
+  packages:
     - joe
     - bash-completion
