@@ -8,6 +8,7 @@ core.ansibleuser:
   sshkey:
     type: ed25519
     bits: 256
+    passphrase:
     
 core.packages:
   - joe
