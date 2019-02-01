@@ -10,7 +10,7 @@
     password: "{{ core_ansibleuser_password }}"
 #    password_never_expires: "{{ core_ansibleuser_password_never_expires }}"
     state: present
-    local: yes
+#    local: yes
 #    user_cannot_change_password: yes
     update_password: always
     generate_ssh_key: yes
