@@ -3,7 +3,7 @@ core_ansibleuser_comment: Local maintenance account (used for Ansible management
 core_ansibleuser_admingroup: wheel
 core_ansibleuser_password_never_expires: true
 core_ansibleuser_sshkey_type: ed25519
-core_ansibleuser_sshkey_type: .ssh/id_ed25519
+core_ansibleuser_sshkey_file: .ssh/id_ed25519
 core_ansibleuser_sshkey_bits: 256
 core_ansibleuser_sshkey_passphrase:
 
