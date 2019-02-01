@@ -30,5 +30,5 @@
 
 - name: Core | Install core packages
   package:
-    name: "{{ core.packages }}"
+    name: "{{ core_packages }}"
     state: present
