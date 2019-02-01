@@ -16,6 +16,15 @@
     ssh_key_bits: "{{ core.ansibleuser.sshkey.bits }}"
     ssh_key_passphrase: "{{ core.ansibleuser.sshkey.passphrase }}"
 
+- name: Enable passwordless sudo for admin group
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: '^%{{ core.ansibleuser.admingroup }}'
+    line: '%{{ core.ansibleuser.admingroup }} ALL=(ALL) NOPASSWD: ALL'
+    validate: 'visudo -cf %s'
+    when: core.ansibleuser.passwordless_sudo
+
 - name: Install core packages
   package:
     name: "{{ core.packages }}"
