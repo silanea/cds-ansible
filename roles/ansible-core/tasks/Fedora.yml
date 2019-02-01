@@ -2,7 +2,7 @@
 # Fedora-specific tasks
 - name: Update system
   package:
-    name: *
+    name: "*"
     state: latest
 
 - name: Run Linux-specific tasks
