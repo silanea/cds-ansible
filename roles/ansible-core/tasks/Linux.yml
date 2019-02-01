@@ -2,7 +2,7 @@
 # Linux-specific tasks
 - name: TEST | core from tasks/Linux.yml
   debug:
-    msg: "{{ core }}"
+    msg: "{{ core.ansibleuser }}"
 
 - name: Add local maintenance user
   user:
