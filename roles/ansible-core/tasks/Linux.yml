@@ -3,16 +3,19 @@
 - name: Add local maintenance user
   user:
     name: "{{ core_ansibleuser_name }}"
-    fullname: "{{ core_ansibleuser_fullname }}"
+#    fullname: "{{ core_ansibleuser_fullname }}"
     comment: "{{ core_ansibleuser_comment }}"
     append: yes
     groups: "{{ core_ansibleuser_admingroup }}"
     password: "{{ core_ansibleuser_password }}"
-    password_never_expires: "{{ core_ansibleuser_password_never_expires }}"
+#    password_never_expires: "{{ core_ansibleuser_password_never_expires }}"
     state: present
-    user_cannot_change_password: yes
+    local: yes
+#    user_cannot_change_password: yes
+    update_password: yes
     generate_ssh_key: yes
     ssh_key_type: "{{ core_ansibleuser_sshkey_type }}"
+    ssh_key_file: "{{ core_ansibleuser_sshkey_file }}"
     ssh_key_bits: "{{ core_ansibleuser_sshkey_bits }}"
     ssh_key_passphrase: "{{ core_ansibleuser_sshkey_passphrase }}"
 
