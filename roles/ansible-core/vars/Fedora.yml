@@ -2,10 +2,9 @@
 core.ansibleuser.comment: Local maintenance account (used for Ansible management)
 core.ansibleuser.admingroup: wheel
 core.ansibleuser.password_never_expires: true
-core.ansibleuser.sshkey:
-core.ansibleuser.type: ed25519
-core.ansibleuser.bits: 256
-core.ansibleuser.passphrase:
+core.ansibleuser.sshkey.type: ed25519
+core.ansibleuser.sshkey.bits: 256
+core.ansibleuser.sshkey.passphrase:
 
 core.packages:
     - joe

@@ -1,0 +1,9 @@
+---
+- name: cds | Core Playbook
+  hosts: core
+  
+  vars_files:
+  - group_vars/all
+  
+  roles:
+  - ansible-core
