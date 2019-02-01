@@ -1,0 +1,9 @@
+---
+# Fedora-specific tasks
+- name: Update system
+  package:
+    name: *
+    state: latest
+
+- name: Run Linux-specific tasks
+  include: "Linux.yml"  

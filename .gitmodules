@@ -1,9 +1,6 @@
 [submodule "thirdparty/ansible-freeipa"]
 	path = thirdparty/ansible-freeipa
 	url = https://github.com/silanea/ansible-freeipa.git
-[submodule "roles/network"]
-	path = roles/network
-	url = https://github.com/linux-system-roles/network.git
 [submodule "roles/firewall"]
 	path = roles/firewall
 	url = https://github.com/linux-system-roles/firewall.git
@@ -13,3 +10,6 @@
 [submodule "roles/ansible-role-bind"]
 	path = roles/ansible-role-bind
 	url = https://github.com/bertvv/ansible-role-bind.git
+[submodule "roles/network"]
+	path = roles/network
+	url = https://github.com/silanea/network.git
