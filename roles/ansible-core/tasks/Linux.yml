@@ -4,7 +4,7 @@
   user:
     name: "{{ core.ansibleuser.name }}"
     fullname: "{{ core.ansibleuser.fullname }}"
-    comment: "{{ core.ansibleuser.description }}"
+    comment: "{{ core.ansibleuser.comment }}"
     append: yes
     groups: "{{ core.ansibleuser.admingroup }}"
     password: "{{ core.ansibleuser.password }}"
