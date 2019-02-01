@@ -12,7 +12,7 @@
     state: present
     local: yes
 #    user_cannot_change_password: yes
-    update_password: yes
+    update_password: always
     generate_ssh_key: yes
     ssh_key_type: "{{ core_ansibleuser_sshkey_type }}"
     ssh_key_file: "{{ core_ansibleuser_sshkey_file }}"
