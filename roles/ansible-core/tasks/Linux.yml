@@ -1,6 +1,6 @@
 ---
 # Linux-specific tasks
-- name: Add local maintenance user
+- name: Core | Add local maintenance user
   user:
     name: "{{ core_ansibleuser_name }}"
 #    fullname: "{{ core_ansibleuser_fullname }}"
@@ -19,7 +19,7 @@
     ssh_key_bits: "{{ core_ansibleuser_sshkey_bits }}"
     ssh_key_passphrase: "{{ core_ansibleuser_sshkey_passphrase }}"
 
-- name: Enable passwordless sudo for admin group
+- name: Core | Enable passwordless sudo for admin group
   lineinfile:
     path: /etc/sudoers
     state: present
@@ -28,7 +28,7 @@
     validate: 'visudo -cf %s'
   when: core_ansibleuser_passwordless_sudo
 
-- name: Install core packages
+- name: Core | Install core packages
   package:
     name: "{{ core.packages }}"
     state: present
