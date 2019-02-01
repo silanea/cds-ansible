@@ -2,12 +2,12 @@
 # Windows-specific tasks
 - name: Add local maintenance user
   win_user:
-    name: {{ core.ansibleuser.name }}
-    fullname: {{ core.ansibleuser.fullname }}
-    description: {{ core.ansibleuser.description }}
+    name: "{{ core.ansibleuser.name }}"
+    fullname: "{{ core.ansibleuser.fullname }}"
+    description: "{{ core.ansibleuser.description }}"
     groups_action: add
-    groups: {{ core.ansibleuser.admingroup }}
-    password: {{ core.ansibleuser.password }}
-    password_never_expires: {{ core.ansibleuser.passwordexpiry }}
+    groups: "{{ core.ansibleuser.admingroup }}"
+    password: "{{ core.ansibleuser.password }}"
+    password_never_expires: "{{ core.ansibleuser.passwordexpiry }}"
     state: present
     user_cannot_change_password: yes

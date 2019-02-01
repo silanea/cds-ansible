@@ -2,21 +2,21 @@
 # Linux-specific tasks
 - name: Add local maintenance user
   user:
-    name: {{ core.ansibleuser.name }}
-    fullname: {{ core.ansibleuser.fullname }}
-    comment: {{ core.ansibleuser.description }}
+    name: "{{ core.ansibleuser.name }}"
+    fullname: "{{ core.ansibleuser.fullname }}"
+    comment: "{{ core.ansibleuser.description }}"
     append: yes
-    groups: {{ core.ansibleuser.admingroup }}
-    password: {{ core.ansibleuser.password }}
-    password_never_expires: {{ core.ansibleuser.password_never_expires }}
+    groups: "{{ core.ansibleuser.admingroup }}"
+    password: "{{ core.ansibleuser.password }}"
+    password_never_expires: "{{ core.ansibleuser.password_never_expires }}"
     state: present
     user_cannot_change_password: yes
     generate_ssh_key: yes
-    ssh_key_type: {{ core.ansibleuser.sshkey.type }}
-    ssh_key_bits: {{ core.ansibleuser.sshkey.bits }}
-    ssh_key_passphrase: {{ core.ansibleuser.sshkey.passphrase }}
+    ssh_key_type: "{{ core.ansibleuser.sshkey.type }}"
+    ssh_key_bits: "{{ core.ansibleuser.sshkey.bits }}"
+    ssh_key_passphrase: "{{ core.ansibleuser.sshkey.passphrase }}"
 
 - name: Install core packages
   package:
-    name: {{ core.packages }}
+    name: "{{ core.packages }}"
     state: present
