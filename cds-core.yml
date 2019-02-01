@@ -4,6 +4,8 @@
   
   vars_files:
   - group_vars/all
+  - group_vars/core
+  - host_vars/{{ inventory_hostname }}
   
   roles:
   - ansible-core
