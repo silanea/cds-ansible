@@ -1,6 +1,4 @@
 ---
-core:
-
 core.ansibleuser:
   comment: Local maintenance account (used for Ansible management)
   admingroup: wheel
