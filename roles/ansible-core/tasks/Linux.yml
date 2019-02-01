@@ -6,28 +6,28 @@
 
 - name: Add local maintenance user
   user:
-    name: "{{ core.ansibleuser.name }}"
-    fullname: "{{ core.ansibleuser.fullname }}"
-    comment: "{{ core.ansibleuser.comment }}"
+    name: "{{ core_ansibleuser_name }}"
+    fullname: "{{ core_ansibleuser_fullname }}"
+    comment: "{{ core_ansibleuser_comment }}"
     append: yes
-    groups: "{{ core.ansibleuser.admingroup }}"
-    password: "{{ core.ansibleuser.password }}"
-    password_never_expires: "{{ core.ansibleuser.password_never_expires }}"
+    groups: "{{ core_ansibleuser_admingroup }}"
+    password: "{{ core_ansibleuser_password }}"
+    password_never_expires: "{{ core_ansibleuser_password_never_expires }}"
     state: present
     user_cannot_change_password: yes
     generate_ssh_key: yes
-    ssh_key_type: "{{ core.ansibleuser.sshkey.type }}"
-    ssh_key_bits: "{{ core.ansibleuser.sshkey.bits }}"
-    ssh_key_passphrase: "{{ core.ansibleuser.sshkey.passphrase }}"
+    ssh_key_type: "{{ core_ansibleuser_sshkey_type }}"
+    ssh_key_bits: "{{ core_ansibleuser_sshkey_bits }}"
+    ssh_key_passphrase: "{{ core_ansibleuser_sshkey_passphrase }}"
 
 - name: Enable passwordless sudo for admin group
   lineinfile:
     path: /etc/sudoers
     state: present
-    regexp: '^%{{ core.ansibleuser.admingroup }}'
-    line: '%{{ core.ansibleuser.admingroup }} ALL=(ALL) NOPASSWD: ALL'
+    regexp: '^%{{ core_ansibleuser_admingroup }}'
+    line: '%{{ core_ansibleuser_admingroup }} ALL=(ALL) NOPASSWD: ALL'
     validate: 'visudo -cf %s'
-    when: core.ansibleuser.passwordless_sudo
+    when: core_ansibleuser_passwordless_sudo
 
 - name: Install core packages
   package:
