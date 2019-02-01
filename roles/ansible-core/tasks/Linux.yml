@@ -1,8 +1,8 @@
 ---
 # Linux-specific tasks
-- name: TEST: core from tasks/Linux.yml
+- name: TEST | core from tasks/Linux.yml
   debug:
-    msg: {{ core }}
+    msg: "{{ core }}"
 
 - name: Add local maintenance user
   user:
