@@ -26,7 +26,7 @@
     regexp: '^%{{ core_ansibleuser_admingroup }}'
     line: '%{{ core_ansibleuser_admingroup }} ALL=(ALL) NOPASSWD: ALL'
     validate: 'visudo -cf %s'
-    when: core_ansibleuser_passwordless_sudo
+  when: core_ansibleuser_passwordless_sudo
 
 - name: Install core packages
   package:
