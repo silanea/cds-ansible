@@ -1,5 +1,8 @@
 ---
 # Linux-specific tasks
+- debug:
+  msg: "Test: {{ core.ansibleuser.name }}"
+
 - name: Add local maintenance user
   user:
     name: "{{ core.ansibleuser.name }}"
