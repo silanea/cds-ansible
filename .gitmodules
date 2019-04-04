@@ -13,9 +13,6 @@
 [submodule "roles/network"]
 	path = roles/network
 	url = https://github.com/silanea/network.git
-[submodule "roles/ansible-sshd"]
-	path = roles/ansible-sshd
-	url = https://github.com/silanea/ansible-sshd.git
 [submodule "roles/ansible-apache"]
 	path = roles/ansible-apache
 	url = https://github.com/silanea/ansible-apache.git
