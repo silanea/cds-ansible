@@ -19,3 +19,12 @@
 [submodule "roles/ansible-apache"]
 	path = roles/ansible-apache
 	url = https://github.com/silanea/ansible-apache.git
+[submodule "roles/ansible-fail2ban"]
+	path = roles/ansible-fail2ban
+	url = https://github.com/nbigot/ansible-fail2ban.git
+[submodule "thirdparty/ansible-citus"]
+	path = thirdparty/ansible-citus
+	url = https://github.com/chaintng/ansible-citus.git
+[submodule "thirdparty/mitogen"]
+	path = thirdparty/mitogen
+	url = https://github.com/dw/mitogen.git
