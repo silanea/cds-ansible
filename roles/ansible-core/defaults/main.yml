@@ -10,3 +10,4 @@ core_ansibleuser_sshkey_passphrase:
 core_packages:
     - joe
     - bash-completion
+    - openssh-server
