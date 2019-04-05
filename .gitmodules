@@ -1,6 +1,6 @@
 [submodule "thirdparty/ansible-freeipa"]
 	path = thirdparty/ansible-freeipa
-	url = https://github.com/silanea/ansible-freeipa.git
+	url = https://github.com/freeipa/ansible-freeipa.git
 [submodule "roles/firewall"]
 	path = roles/firewall
 	url = https://github.com/linux-system-roles/firewall.git
